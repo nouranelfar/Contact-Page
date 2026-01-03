@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Fill out the form to view details">
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+
+    <title>Contact Page | devChallenges.io</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        min-height: fit-content;
+        font-family: "Be Vietnam Pro", "Poppins" ,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #FFF;
+
+        background: url("resources/background@3x.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      header{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+      header .quesContainer{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      header .quesContainer h1{
+        font-size: 64px;
+      }
+      header .quesContainer p{
+        font-size: 32px;
+      }
+      main{
+        padding: 20px;
+      }
+      main form{
+        background-color: #FFFFFF33;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 25px;
+      }
+      main form div{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      main form{
+        font-size: 14px;
+      }
+      main form div input,select,textarea,button[type="submit"]{
+        height: 80px;
+        padding: 20px;
+        border: transparent;
+        border-radius: 15px;
+        outline-color: lightblue;
+        background-color: #FFF;
+        font-size: 16px;
+      }
+      form textarea{
+        height: 200px;
+      }
+      form button[type="submit"]{
+        color: #4036A9;
+        font-size: 20px;
+        font-weight: 700;
+        transition: 0.3 ease-in-out;
+      }
+      form button:hover{
+        background-color: #CDD5E0;
+        cursor: pointer;
+      }
+
+      /*screens from 1024px to 1349px*/
+      @media (min-width: 1024px) and (max-width: 1349px) {
+        body{
+          background: url("resources/background@2x.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        header{
+          padding: 4% 8%;
+          gap: 60px;
+        }
+        .quesContainer{
+          width: 750px;
+          align-self: center;
+          gap: 25px;
+        }
+        header .quesContainer p , header .quesContainer h1{
+          line-height: 1.5;
+        }
+        main{
+          padding: 4% 8%;
+        }
+        main form{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 40px 30px;
+          min-height: fit-content;
+          gap: 35px 20px;
+        }
+        main form div {
+          width: 48%;
+          height: 120px;
+          gap: 15px;
+        }
+        main form div input,select,button[type="submit"]{
+          height: 100px;
+          font-weight: 700;
+          border-radius: 22px;
+        }
+        form #textareaContainer , form button{
+          width: 98%;
+        }
+        form #textareaContainer{
+          height: 280px;
+        }
+        form  textarea{
+          height: 250px;
+          font-weight: 700;
+          border-radius: 22px;
+        }
+      }
+
+      /* wider than 1350px screens*/
+      @media (min-width: 1350px) {
+          body{
+            background: url("resources/background.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          header{
+            padding: 2% 5%;
+            gap: 44px;
+          }
+          .quesContainer{
+            width: 650px;
+            align-self: center;
+            gap: 20px;
+          }
+          header .quesContainer p , header .quesContainer h1{
+            line-height: 1.4;
+          }
+          main{
+            padding: 3% 20%;
+          }
+          main form{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+            min-height: fit-content;
+            gap: 25px 20px;
+          }
+          main form div {
+            width: 48%;
+            height: 90px;
+            gap: 5px;
+          }
+          main form div input,select,button[type="submit"]{
+            height: 70px;
+            font-weight: 700;
+            border-radius: 18px;
+          }
+          form #textareaContainer , form button{
+            width: 98%;
+          }
+          form #textareaContainer{
+            height: 240px;
+          }
+          form  textarea{
+            height: 210px;
+            font-weight: 700;
+            border-radius: 18px;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logoContainer">
+        <img src="resources/Logo.svg" alt="logo" loading="eager" 
+        srcset="resources/Logo.svg 20w ,resources/Logo.svg 101w"
+        sizes="(max-width:1023px) 101px ,(max-width:1350px) 110px , 120px">
+      </div>
+      <div class="quesContainer">
+        <h1>Interested in our business pricing?</h1>
+        <p>Fill out the form to view details and we’ll contact you as soon as possible.</p>
+      </div>
+    </header>
+    <main>
+      <form action="#" method="post">
+        <div>
+          <label for="">Name</label>
+          <input type="text" name="name" value="Ethan Johnson">
+        </div>
+
+        <div>
+          <label for="">Company Email</label>
+          <input type="email" name="email" value="ethan@johnson.com">
+        </div>
+
+        <div>
+          <label for="">Company Size</label>
+          <select name="Company Size" id="">
+            <option value="50-100 employees">50-100 employees</option>
+            <option value="100-200 employees">100-200 employees</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="">Subject</label>
+          <select name="Subject" id="">
+            <option value="Building Landing pages">Building Landing pages</option>
+            <option value="Building Landing pages2">Building Landing pages2</option>
+          </select>
+        </div>
+
+        <div id="textareaContainer">
+          <label for="">Message</label>
+          <textarea name="50-100 employees" id="">50-100 employees</textarea>
+        </div>
+
+        <button type="submit" title="submit">Contact Sales</button>
+      </form>
+    </main>
+  </body>
+</html>

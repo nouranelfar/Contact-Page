@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="#" method="post" id="myForm">
+    <input type="text" name="username" id="username" placeholder="Enter username">
+    <div id="errorMessage" class="error"></div>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    var myForm = document.getElementById("myForm");
+    var errorMessage = document.getElementById("errorMessage");
+
+    myForm.addEventListener("submit", function (event) {
+      var usernameInput = myForm.elements.username;
+
+      if (!isUsernameValid(usernameInput.value)) {
+        event.preventDefault(); // إيقاف إرسال الفورم
+        showValidationError("Username is required and must be at least 3 characters");
+      } else {
+        errorMessage.textContent = "";
+      }
+    });
+
+    function isUsernameValid(username) {
+      return username.trim().length >= 3;
+    }
+
+    function showValidationError(message) {
+      errorMessage.textContent = message;
+    }
+  </script>
+
+</body>
+</html>
