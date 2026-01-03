@@ -155,13 +155,13 @@
             background-size: cover;
           }
           header{
-            padding: 2% 5%;
+            padding: 1% 5%;
             gap: 44px;
           }
           .quesContainer{
             width: 650px;
             align-self: center;
-            gap: 20px;
+            gap: 15px;
           }
           header .quesContainer p , header .quesContainer h1{
             line-height: 1.4;
@@ -205,7 +205,7 @@
   <body>
     <header>
       <div class="logoContainer">
-        <img src="resources/Logo.svg" alt="logo" loading="eager" 
+        <img src="resources/Logo.svg" alt="logo" loading="eager" width="101" height="30"
         srcset="resources/Logo.svg 20w ,resources/Logo.svg 101w"
         sizes="(max-width:1023px) 101px ,(max-width:1350px) 110px , 120px">
       </div>
@@ -217,34 +217,34 @@
     <main>
       <form action="#" method="post">
         <div>
-          <label for="">Name</label>
-          <input type="text" name="name" value="Ethan Johnson">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" value="Ethan Johnson">
         </div>
 
         <div>
-          <label for="">Company Email</label>
-          <input type="email" name="email" value="ethan@johnson.com">
+          <label for="email">Company Email</label>
+          <input type="email" id="email" name="email" value="ethan@johnson.com">
         </div>
 
         <div>
-          <label for="">Company Size</label>
-          <select name="Company Size" id="">
+          <label for="company_size">Company Size</label>
+          <select name="Company Size" id="company_size">
             <option value="50-100 employees">50-100 employees</option>
             <option value="100-200 employees">100-200 employees</option>
           </select>
         </div>
         
         <div>
-          <label for="">Subject</label>
-          <select name="Subject" id="">
+          <label for="subject">Subject</label>
+          <select name="Subject" id="subject">
             <option value="Building Landing pages">Building Landing pages</option>
             <option value="Building Landing pages2">Building Landing pages2</option>
           </select>
         </div>
 
         <div id="textareaContainer">
-          <label for="">Message</label>
-          <textarea name="50-100 employees" id="">50-100 employees</textarea>
+          <label for="textarea">Message</label>
+          <textarea name="50-100 employees" id="textarea">50-100 employees</textarea>
         </div>
 
         <button type="submit" title="submit">Contact Sales</button>
